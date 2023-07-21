@@ -6,7 +6,7 @@ from utils import connect_to_mariadb, initialize_bigquery_client, create_bigquer
 project_id = 'rt-warehouse'
 dataset_id = 'EmalifyMariaDB'
 table_id = 'batches'
-service_account_key_file = '/Users/Eunice/Downloads/rt-warehouse-cc04618cfb56.json'
+service_account_key_file = '.credentials'
 
 # Connect to MariaDB database
 mariadb_conn = connect_to_mariadb()
