@@ -22,6 +22,8 @@ def fetch_table_schema_from_mariadb(mariadb_conn, table_name):
     logger.info(f'Schema for {table_name} is {table_schema}')
     return table_schema
 
+    
+def convert_mysql_schema_to_bigquery_schema(table_schema):
     logger.info(f'Converting {table_schema} to bigquery')
     bq_schema = []
     for column in table_schema:
