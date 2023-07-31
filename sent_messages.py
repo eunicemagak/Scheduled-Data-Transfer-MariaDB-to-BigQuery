@@ -54,7 +54,7 @@ def fetch_data_from_mariadb(mariadb_cursor, table_name, last_id=None):
         mysql_query = f"SELECT * FROM {table_name} LIMIT 10000"
     else:
         # Fetch data from MySQL table with ID greater than the last ID in BigQuery
-        mysql_query = f"SELECT * FROM {table_name} WHERE id > {last_id} LIMIT 10000"
+        mysql_query = f"SELECT * FROM {table_name} WHERE id > {last_id} LIMIT 5000"
 
     logger.info(f'MySQL Query: {mysql_query}') 
 
