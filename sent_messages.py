@@ -51,10 +51,10 @@ def fetch_data_from_mariadb(mariadb_cursor, table_name, last_id=None):
     logger.info(f'Fetching data from mariadb for {table_name}')
     if last_id is None:
         # Fetch all data from the MariaDB table
-        mysql_query = f"SELECT * FROM {table_name} LIMIT 10000"
+        mysql_query = f"SELECT * FROM {table_name} LIMIT 5000"
     else:
         # Fetch data from MySQL table with ID greater than the last ID in BigQuery
-        mysql_query = f"SELECT * FROM {table_name} WHERE id > {last_id} LIMIT 5000"
+        mysql_query = f"SELECT * FROM {table_name} WHERE id > {last_id} LIMIT 10000"
 
     logger.info(f'MySQL Query: {mysql_query}') 
 
